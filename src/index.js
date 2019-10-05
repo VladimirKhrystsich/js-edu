@@ -12,3 +12,11 @@ module.exports = function getTimeForEducation(
       return 0;
   };
   
+
+   function getTimeForEducation (priority, knowsProgramming, speedConfig) {
+	if (knowsProgramming == true) {
+		return Math.ceil(800 / speedConfig[priority]);
+	}	else {
+		return Math.ceil(1300 / speedConfig[priority]);
+	}
+}
